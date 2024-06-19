@@ -1,5 +1,7 @@
 # Wave Response Simulation and optimization of connector stiffness
 
+The readme is in two parts. The simulator first, then the MATLAB optimization code (pt. 5 in table of contents).
+
 The code in this repository simulates the wave response of a multi-modular floating structure and optimizes the stiffness in the connectors. It calculates the system's surge response, relative motion between modules, and the forces in the connecting springs under different wave conditions and spring stiffness values. The results are visualized through various plots.
 
 ## Table of Contents
