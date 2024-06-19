@@ -1,6 +1,6 @@
 # Wave Response Simulation
 
-The code in this repository simulates the wave response of a multi-modular floating structure. It calculates the system's surge response, relative motion between modules, and the forces in the connecting springs under different wave conditions and spring stiffness values. The results are visualized through various plots.
+The code in this repository simulates the wave response of a multi-modular floating structure and optimizes the stiffness in the connectors. It calculates the system's surge response, relative motion between modules, and the forces in the connecting springs under different wave conditions and spring stiffness values. The results are visualized through various plots.
 
 ## Table of Contents
 1. [Requirements](#requirements)
@@ -59,7 +59,7 @@ To run a simulation with specific wave period, wave steepness, and spring stiffn
 
 ## Overview
 
-This README provides information about the MATLAB script `alternating2.m` used for optimizing the stiffness in a multimodular system based on the simulation code above. The optimization algorithm uses the CVX toolbox for convex optimization in MATLAB.
+This section provides information about the MATLAB script `alternating2.m` used for optimizing the stiffness in the system based on the simulation code above. The optimization algorithm uses the CVX toolbox for convex optimization in MATLAB.
 
 ## Prerequisites
 - CVX toolbox installed in MATLAB. You can download and install CVX from [http://cvxr.com/cvx/download/](http://cvxr.com/cvx/download/).
@@ -69,15 +69,6 @@ This README provides information about the MATLAB script `alternating2.m` used f
 1. Ensure the `optimization.m` script and the `SystMatr.mat` file are in the same directory.
 
 ## Usage
-
-### Running the MATLAB Script
-
-1. Open MATLAB.
-2. Navigate to the directory containing `optimization.m` and `SystMatr.mat`.
-3. Run the script by entering the following command in the MATLAB Command Window:
-    ```
-    run('alternating2.m')
-    ```
 
 ### Optimization Process
 
