@@ -48,7 +48,7 @@ To run a simulation with specific wave period, wave steepness, and spring stiffn
 
 ### Helper Functions
 
-- `systemMatrices(n, m_inclAm, d)`: Generates the system matrices `A0`, `B`, `C`, and `Mk` for the simulation and stores them in `SystMatr.mat` to be used for the optimization.
+- `systemMatrices(n, m_inclAm, d)`: Generates the system matrices `A0`, `B`, `C`, and `Mk` for the simulation and stores them in `SystMatr.mat` to be used in the optimization.
 - `findEigenVal(Mk, stiffnvect, m_inclAm)`: Computes the eigenvalues and eigenfrequencies of the system.
 
 ### Additional Files
