@@ -10,7 +10,7 @@ The code in this repository simulates the wave response of a multi-modular float
     - [Main Functions](#main-functions)
     - [Helper Functions](#helper-functions)
     - [Additional Files](#additional-files)
-5. [Examples](#examples)
+5. [Stiffness Optimization](#stiffness-optimization)
 
 
 ## Requirements
@@ -53,3 +53,45 @@ To run a simulation with specific wave period, wave steepness, and spring stiffn
 
 - `WadamReader.py`: Contains the function `readWadam` for reading WADAM output files.
 - `waveForce.py`: Contains the function `w` for calculating the wave force vector in a time step.
+
+
+# Stiffness Optimization
+
+## Overview
+
+This README provides information about the MATLAB script `alternating2.m` used for optimizing the stiffness in a multimodular system based on the simulation code above. The optimization algorithm uses the CVX toolbox for convex optimization in MATLAB.
+
+## Prerequisites
+- CVX toolbox installed in MATLAB. You can download and install CVX from [http://cvxr.com/cvx/download/](http://cvxr.com/cvx/download/).
+
+## Installation
+
+1. Ensure the `optimization.m` script and the `SystMatr.mat` file are in the same directory.
+
+## Usage
+
+### Running the MATLAB Script
+
+1. Open MATLAB.
+2. Navigate to the directory containing `optimization.m` and `SystMatr.mat`.
+3. Run the script by entering the following command in the MATLAB Command Window:
+    ```
+    run('alternating2.m')
+    ```
+
+### Optimization Process
+
+The script performs the following steps:
+1. Loads the system matrices from `SystMatr.mat`.
+2. Initializes parameters and sets up the optimization problem.
+3. Uses CVX to solve a series of semidefinite programming (SDP) problems to find the optimal parameters.
+4. Refines the solution iteratively to achieve a tighter bound on the system's performance metric.
+
+## CVX Toolbox
+
+CVX is a MATLAB-based modeling system for convex optimization problems. It allows for easy specification and solution of convex programs. In this script, CVX is used to solve SDP problems during the optimization process.
+
+## Files
+
+- `alternating2.m`: MATLAB script to perform the optimization.
+- `SystMatr.mat`: File containing the system matrices `Mk`, `A0`, `B`, and `C`.
